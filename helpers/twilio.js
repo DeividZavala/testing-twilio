@@ -7,5 +7,5 @@ exports.sendMessage = (body, receiver) => {
     to: receiver,
     from: process.env.TWILIONUMBER
   };
-  client.message.create(messageObject);
+  return client.messages.create(messageObject);
 };
